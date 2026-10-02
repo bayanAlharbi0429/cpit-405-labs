@@ -1,15 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Labs Directory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labs &amp; Projects | Bayan Alharbi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Labs</h1>
-    <ul>
-        <li><a href="lab1.html">Lab 1</a></li>
-        <li><a href="lab2.html">Lab 2</a></li>
-        <li><a href="lab3.html">Lab 3</a></li>
-    </ul>
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <h1>Bayan Alharbi</h1>
+                <p>IT Student | UI/UX Designer</p>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a class="active" href="labs.html">Labs</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <img class="avatar" src="../Profile_Picture.jpeg" alt="Portrait of Bayan Alharbi">
+            <h2>Quick Links</h2>
+            <ul class="side-links">
+                <li><a href="#labs">Completed Labs</a></li>
+                <li><a href="#projects">Completed Projects</a></li>
+                <li><a href="../index.html">View CV</a></li>
+                <li><a href="../contact.html">Contact Me</a></li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <section id="labs">
+                <h2>Completed Labs</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Lab</th><th>Topic</th><th>Status</th><th>Link</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Lab 1</td><td>Setup</td><td>Completed</td><td><a href="lab1.html">Open</a></td></tr>
+                            <tr><td>Lab 2</td><td>HTML</td><td>Completed</td><td><a href="lab2.html">Open</a></td></tr>
+                            <tr><td>Lab 3</td><td>CSS</td><td>Completed</td><td><a href="lab3.html">Open</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Completed Projects</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Project</th><th>Description</th><th>Link</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bonat App</td>
+                                <td>UI/UX redesign of a loyalty app: new core flows, transaction and invoicing screens, and a Figma design system.</td>
+                                <td><a href="#" target="_blank" rel="noopener">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Boat Monitoring System</td>
+                                <td>Real-time coastal safety system for Jeddah Municipality, with a full SRS and a color-coded pre-warning map.</td>
+                                <td><a href="#" target="_blank" rel="noopener">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bayan Alharbi - CPIT 405 Portfolio</p>
+    </footer>
 </body>
 </html>
