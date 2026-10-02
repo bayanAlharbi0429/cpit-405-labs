@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Bayan Alharbi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <h1>Bayan Alharbi</h1>
+                <p>IT Student | UI/UX Designer</p>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Labs/labs.html">Labs</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <img class="avatar" src="Profile_Picture.jpeg" alt="Portrait of Bayan Alharbi">
+            <h2>Contact Info</h2>
+            <ul class="info">
+                <li><strong>Email:</strong><br><a href="mailto:balharbi0429@stu.kau.edu.sa">balharbi0429@stu.kau.edu.sa</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+966565396577">+966 56 539 6577</a></li>
+                <li><a href="https://www.linkedin.com/in/bayan-alharbi-2350b9365" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <section>
+                <h2>Contact Me</h2>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="87ba7bdd-175e-41fd-a93a-cb119eaacb08">
+                    <input type="hidden" name="subject" value="New message from my CPIT405 portfolio">
+                    <input type="hidden" name="from_name" value="CPIT405 Portfolio">
+                    <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <fieldset>
+                        <legend class="hidden">Message type</legend>
+                        Message Type:
+                        <label><input type="radio" name="message_type" value="Inquiry" checked> Inquiry</label>
+                        <label><input type="radio" name="message_type" value="Feedback"> Feedback</label>
+                    </fieldset>
+
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bayan Alharbi - CPIT 405 Portfolio</p>
+    </footer>
+</body>
+</html>
