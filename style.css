@@ -98,7 +98,22 @@ aside h2::after { margin: 4px auto 0; }
 .side-links li:nth-child(3n) a { background: var(--white); }
 .side-links a:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--ink); background: var(--orange); color: var(--white); text-decoration: none; }
 
-.info { list-style: none; font-size: .92rem; display: grid; gap: 6px; word-break: break-word; }
+/* Info list: label above value, left-aligned, like the Figma portfolio card */
+.info { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; text-align: left; word-break: break-word; }
+.info li { width: 100%; padding-bottom: 10px; border-bottom: 2px dashed var(--purple-mid); }
+.info strong { display: block; font-size: .8rem; font-weight: 700; color: var(--muted); }
+.info li a { font-size: .95rem; }
+/* LinkedIn / GitHub: two buttons side by side */
+.info li:not(:has(strong)) { width: calc(50% - 6px); padding: 0; border: 0; }
+.info li:not(:has(strong)) a {
+    display: block; text-align: center; padding: 7px; border: var(--stroke); border-radius: 12px;
+    background: var(--sky-soft); color: var(--ink); transition: transform .2s, box-shadow .2s, background .2s;
+}
+.info li:not(:has(strong)):last-child a { background: var(--orange-soft); }
+.info li:not(:has(strong)) a:hover {
+    transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--ink);
+    background: var(--purple); color: var(--white); text-decoration: none;
+}
 
 /* ===== Content blocks ===== */
 .lead { font-size: 1.35rem; font-weight: 800; color: var(--purple); }
@@ -153,8 +168,21 @@ input[type="radio"] { accent-color: var(--purple); }
 
 /* ===== Footer ===== */
 footer {
-    background: var(--ink); color: var(--white); text-align: center; padding: 18px; font-weight: 700;
-    border-top: 6px solid var(--orange);
+    display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 14px;
+    padding: 8px 24px 40px;
+}
+/* Sticker strip, like the "Thank you!!" slide in the Figma portfolio */
+footer p {
+    background: var(--white); color: var(--ink); font-weight: 800;
+    border: 5px solid var(--sky); border-radius: 6px; padding: 8px 22px;
+    transform: rotate(-1.5deg); box-shadow: var(--pop); transition: transform .2s;
+}
+footer p:hover { transform: rotate(0); }
+/* Comment bubble */
+footer::after {
+    content: "I hope u enjoy!!"; background: var(--orange); color: var(--white); font-weight: 800;
+    border: var(--stroke); border-radius: 20px 20px 20px 4px; padding: 8px 18px;
+    box-shadow: 3px 3px 0 var(--ink); transform: rotate(1.5deg);
 }
 
 /* ===== Responsive ===== */
