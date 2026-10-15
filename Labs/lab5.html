@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5: NBA Player Stats | Bayan Alharbi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="lab5.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <h1>Bayan Alharbi</h1>
+                <p>IT Student | UI/UX Designer</p>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a class="active" href="labs.html">Labs</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="single">
+        <div class="content">
+            <section>
+                <div class="lab-head">
+                    <h2>NBA Player Stats Dashboard</h2>
+                    <button type="button" id="dark-mode-toggle" class="toggle-btn" aria-pressed="false">Toggle Dark Mode</button>
+                </div>
+
+                <div class="table-filters">
+                    <input type="text" id="search" placeholder="Search players..." aria-label="Search players">
+                    <select id="team-filter" aria-label="Filter by team">
+                        <option value="all">All</option>
+                        <!-- Teams are added by lab5.js -->
+                    </select>
+                    <span id="result-count" class="result-count" aria-live="polite"></span>
+                </div>
+
+                <div class="table-wrap">
+                    <table id="player-stats">
+                        <thead>
+                            <tr>
+                                <th data-key="name">Name</th>
+                                <th data-key="code">Team</th>
+                                <th data-key="points">Points</th>
+                                <th data-key="rebounds">Rebounds</th>
+                                <th data-key="assists">Assists</th>
+                            </tr>
+                        </thead>
+                        <tbody id="player-rows">
+                            <!-- Rows are added by lab5.js -->
+                        </tbody>
+                    </table>
+                </div>
+                <p class="hint">Tip: click a column header to sort.</p>
+            </section>
+
+            <p><a href="labs.html">&larr; Back to Labs</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bayan Alharbi - CPIT 405 Portfolio</p>
+    </footer>
+
+    <script src="lab5.js"></script>
+</body>
+</html>
