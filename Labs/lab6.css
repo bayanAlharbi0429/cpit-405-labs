@@ -1,0 +1,54 @@
+/* Lab 6 extras: layered on top of ../style.css */
+main.single { grid-template-columns: 1fr; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.vote-card { text-align: center; }
+.vote-card h2::after { margin-left: auto; margin-right: auto; }
+.status { min-height: 1.6em; font-weight: 700; color: var(--muted); }
+.status.flash { animation: flash .6s ease; }
+@keyframes flash { 0% { color: var(--orange); transform: scale(1.05); } 100% { color: var(--muted); transform: scale(1); } }
+
+.vote-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0 8px; }
+.vote {
+    display: flex; align-items: center; gap: 12px; padding: 12px 30px; cursor: pointer;
+    border: var(--stroke); border-radius: 20px; box-shadow: var(--pop); font: inherit; color: var(--ink);
+    background: var(--sky-soft); transition: transform .15s, box-shadow .15s, background .2s;
+}
+.vote.dislike { background: var(--purple-soft); }
+.vote .emoji { font-size: 2.6rem; line-height: 1; transition: transform .25s; }
+.vote .count { font-size: 2.2rem; font-weight: 800; }
+.vote:hover:not(:disabled) { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+.vote:hover:not(:disabled) .emoji { transform: rotate(-14deg) scale(1.2); }
+.vote:active:not(:disabled) .emoji { transform: scale(.9); }
+.vote.chosen { background: var(--orange); color: var(--white); }
+.vote:disabled:not(.chosen) { opacity: .55; cursor: not-allowed; box-shadow: none; }
+.vote.chosen:disabled { cursor: default; }
+
+#comment-input {
+    width: 100%; min-height: 130px; padding: 12px 14px; font: inherit; color: var(--ink); resize: vertical;
+    border: var(--stroke); border-radius: 16px; background: var(--white); transition: box-shadow .2s, background .2s;
+}
+#comment-input:focus { background: var(--sky-soft); box-shadow: 4px 4px 0 var(--sky); outline: none; }
+#comment-input:disabled { background: #eee; cursor: not-allowed; }
+.char-count { text-align: right; font-size: .85rem; color: var(--muted); margin-top: 4px; }
+.form-buttons { display: flex; gap: 12px; margin-top: 8px; }
+#submit-btn, #clear-btn, .reset-btn {
+    padding: 10px 28px; border: var(--stroke); border-radius: 14px; cursor: pointer; font: inherit; font-weight: 800;
+    box-shadow: var(--pop); transition: transform .15s, box-shadow .15s, background .2s;
+}
+#submit-btn { background: var(--orange); color: var(--white); }
+#clear-btn { background: var(--white); color: var(--ink); }
+.reset-btn { background: var(--purple); color: var(--white); }
+#submit-btn:hover:not(:disabled), #clear-btn:hover:not(:disabled), .reset-btn:hover {
+    transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink);
+}
+#submit-btn:disabled, #clear-btn:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; }
+
+.comments { list-style: none; margin-top: 20px; display: grid; gap: 10px; }
+.comments li {
+    padding: 12px 16px; border: var(--stroke); border-radius: 16px; background: var(--sky-soft);
+    overflow-wrap: anywhere; white-space: pre-wrap;
+}
+.comments li.empty { background: transparent; border-style: dashed; color: var(--muted); text-align: center; white-space: normal; }
+
+@media (prefers-reduced-motion: reduce) { .status.flash { animation: none; } }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6: Like &amp; Dislike | Bayan Alharbi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="lab6.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <h1>Bayan Alharbi</h1>
+                <p>IT Student | UI/UX Designer</p>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a class="active" href="labs.html">Labs</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="single">
+        <div class="content">
+            <section class="vote-card">
+                <h2>Lab 6: Like or dislike</h2>
+                <p class="status" id="status" aria-live="polite">Pick one. You can vote once, and reset to vote again.</p>
+
+                <div class="vote-buttons">
+                    <button type="button" id="like-btn" class="vote like" aria-pressed="false">
+                        <span class="emoji" aria-hidden="true">&#128077;</span>
+                        <span id="like-count" class="count">100</span>
+                        <span class="sr-only">Like</span>
+                    </button>
+                    <button type="button" id="dislike-btn" class="vote dislike" aria-pressed="false">
+                        <span class="emoji" aria-hidden="true">&#128078;</span>
+                        <span id="dislike-count" class="count">20</span>
+                        <span class="sr-only">Dislike</span>
+                    </button>
+                </div>
+            </section>
+
+            <section>
+                <h2>Comments</h2>
+                <form id="comment-form">
+                    <label for="comment-input" class="sr-only">Write a comment</label>
+                    <textarea id="comment-input" maxlength="300" placeholder="Write a comment..."></textarea>
+                    <p class="char-count"><span id="char-count">0</span>/300</p>
+                    <div class="form-buttons">
+                        <button type="submit" id="submit-btn">Submit</button>
+                        <button type="button" id="clear-btn" class="secondary">Clear</button>
+                    </div>
+                </form>
+
+                <ul id="comments-list" class="comments"></ul>
+            </section>
+
+            <section>
+                <button type="button" id="reset-btn" class="reset-btn">Reset my vote &amp; comment</button>
+            </section>
+
+            <p><a href="labs.html">&larr; Back to Labs</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bayan Alharbi - CPIT 405 Portfolio</p>
+    </footer>
+
+    <script src="lab6.js"></script>
+</body>
+</html>
