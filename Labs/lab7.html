@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7: Unsplash API | Bayan Alharbi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="lab7.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <h1>Bayan Alharbi</h1>
+                <p>IT Student | UI/UX Designer</p>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a class="active" href="labs.html">Labs</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="single">
+        <div class="content">
+            <section>
+                <h2>Unsplash API</h2>
+
+                <form id="search-form" class="toolbar" role="search">
+                    <label for="query" class="sr-only">Search photos</label>
+                    <input type="text" id="query" value="Makkah" placeholder="Search photos...">
+                    <button type="button" id="btn-xhr">Search using XHR</button>
+                    <button type="button" id="btn-promises">Search using fetch (promises)</button>
+                    <button type="submit" id="btn-async">Search using fetch (async/await)</button>
+                </form>
+                <p class="hint">Press Enter in the search box to search with async/await.</p>
+
+                <p id="message" class="message" role="status" aria-live="polite"></p>
+                <div id="gallery" class="gallery"></div>
+            </section>
+
+            <p><a href="labs.html">&larr; Back to Labs</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bayan Alharbi - CPIT 405 Portfolio</p>
+    </footer>
+
+    <script src="lab7.js"></script>
+</body>
+</html>
