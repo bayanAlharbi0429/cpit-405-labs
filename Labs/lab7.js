@@ -1,8 +1,3 @@
-/* Lab 7: consume the Unsplash search API three ways:
-   1) XMLHttpRequest   2) fetch with promises   3) fetch with async/await */
-
-// Paste your Unsplash Access Key here (Unsplash Developers > Your apps).
-// Note: this is a client-side lab, so the key is visible to anyone who views the page source.
 const ACCESS_KEY = "60a5bYnMUzIOpbYg97O7hPvHPUhDcTZTqeiz0T7Vw8s";
 
 const API_URL = "https://api.unsplash.com/search/photos";
@@ -40,7 +35,7 @@ function getQuery() {
         queryInput.focus();
         return null;
     }
-    if (ACCESS_KEY === "YOUR_UNSPLASH_ACCESS_KEY" || ACCESS_KEY === "") {
+    if (ACCESS_KEY === "60a5bYnMUzIOpbYg97O7hPvHPUhDcTZTqeiz0T7Vw8s" || ACCESS_KEY === "") {
         setMessage("Add your Unsplash Access Key at the top of lab7.js first.", true);
         return null;
     }
