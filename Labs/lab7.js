@@ -35,7 +35,7 @@ function getQuery() {
         queryInput.focus();
         return null;
     }
-    if (ACCESS_KEY === "60a5bYnMUzIOpbYg97O7hPvHPUhDcTZTqeiz0T7Vw8s" || ACCESS_KEY === "") {
+    if (ACCESS_KEY === "" || ACCESS_KEY === "") {
         setMessage("Add your Unsplash Access Key at the top of lab7.js first.", true);
         return null;
     }
