@@ -1,3 +1,4 @@
+// Bayan Alharbi - 2305950
 const ACCESS_KEY = "60a5bYnMUzIOpbYg97O7hPvHPUhDcTZTqeiz0T7Vw8s";
 
 const API_URL = "https://api.unsplash.com/search/photos";

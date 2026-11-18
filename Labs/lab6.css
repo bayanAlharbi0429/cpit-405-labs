@@ -1,3 +1,4 @@
+/* Bayan Alharbi - 2305950 */
 /* Lab 6 extras: layered on top of ../style.css */
 main.single { grid-template-columns: 1fr; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

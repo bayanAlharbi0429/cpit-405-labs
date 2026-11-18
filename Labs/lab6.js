@@ -1,3 +1,4 @@
+// Bayan Alharbi - 2305950
 /* Lab 6: like / dislike + comments, managed with cookies */
 
 // Starting totals (as in the lab's example). There is no server, so these are
